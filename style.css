@@ -1,0 +1,63 @@
+body {
+	margin:0;
+}
+
+table {
+	font-size:120%;
+	width:100%;
+	text-align:center;
+	border-collapse: collapse;
+	padding-bottom: 30px;
+}
+
+#tabella1 {
+    padding-top: 30px;
+    padding-bottom:30px;
+}
+
+td {
+	width: 50%;
+    padding:0;
+}
+
+h1 {
+	font-size: 350%;
+	text-align:center;
+}
+
+footer {
+    bottom:0;
+    /*height:30px;*/
+    position:absolute;
+    width:100%;
+    border-top:solid 1px black;
+    padding-top: 10px;
+}
+
+#checkNet {
+    float: left;
+    margin-left: 10px;
+}
+
+#ver {
+    margin-left: 90%;
+    float: left;
+}
+
+.buttonBig {
+    margin-top: 15%;
+    padding: 3%;
+    border: 1px solid black;
+    float: left;
+    width: 43%;
+    text-align: center
+}
+
+.buttonBig, a {
+    text-decoration: none;
+    color: black;
+}
+
+#talk {
+    margin-left: 75%;
+}
