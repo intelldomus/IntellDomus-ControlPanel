@@ -1,0 +1,57 @@
+<html>
+<head>
+<script>
+	function sintesi(){
+		
+		if (!('webkitSpeechRecognition' in window)) {
+			alert("errore");
+		} else {
+			var recognition = new webkitSpeechRecognition();
+			recognition.continuous = false;
+			recognition.interimResults = true;
+
+			recognition.start();
+
+			var final_transcript = '';
+			alert("started");
+			recognition.onresult = function (event) {
+				
+				console.log(JSON.stringify(event.results));
+				var interim_transcript = '';
+				if (typeof (event.results) == 'undefined') {
+					recognition.onend = null;
+					recognition.stop();
+					upgrade();
+					return ;
+				}
+				for (var i = event.resultIndex; i < event.results.length; ++i) {
+					if (event.results[i].isFinal) {
+						final_transcript += event.results[i][0].transcript;
+					} else {
+						interim_transcript += event.results[i][0].transcript;
+					}
+				}
+				//document.getElementsByTagName('div')[0].innerText = final_transcript;
+				document.getElementById('testo1').value= final_transcript;
+							
+			};
+			
+			recognition.onend = function () {
+			   recognition.start();
+			}
+
+		}
+	}
+</script>
+</head>
+<body>
+<div id="div1" style="margin-left:5%">
+<h1><p>Sintesi Vocale  </p> </h1>
+<h2><p>Clicca sul microfono per iniziare ad ascoltare  </p></h2>
+<form>
+<img src="microfono.png" onclick="sintesi()" width="50px" height="50px" style="margin-top:2%;" />
+<input type="text" name="testo" id="testo1" disabled style="height:100px; width:400px""/>
+</form>
+</div>
+</body>
+</html>
