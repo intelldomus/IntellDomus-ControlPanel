@@ -20,6 +20,9 @@
 		case 6:
 			include("paginesito/option.php");
 			break;
+		case 7:
+			include("paginesito/sintesi.html");
+			break;
 	}		
 	
 	//Sinclude("foot.html");

@@ -9,6 +9,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>IntellDomus | Panello di controllo</title>
+		<!-- JavaScript -->
+		<script src="js/sintesi.js"></script>
 		<script src="js/optionJS.js"></script>
 		<script src="js/homeJS.js"></script>
 		<!-- Fogli di stile -->
@@ -21,10 +23,6 @@
 	    <!--[if lt IE 9]>
 	    <script src="js/respond.min.js"></script>
 	    <![endif]-->
-
-		<script>
-			$("#qrcode").qrcode("IntellDomus: La tua casa domotica.");
-		</script>
 	</head>
     
 	<body onLoad="notify()">
@@ -45,6 +43,7 @@
             <li><a href="#" onClick="changePage(1)">Led</a></li>
 			<li><a href="#" onClick="changePage(4)">Sorveglianza</a></li>
 			<li><a href="#" onClick="changePage(5)">SmaBell</a></li>
+			<li><a href="#" onClick="changePage(7)">Sintesi Vocale</a></li>
           </ul>
 		  <ul class="nav navbar-nav navbar-right">
 			<li>
@@ -87,9 +86,5 @@
 		<!-- jQuery e plugin JavaScript  -->
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		
-		<script>
-			$("#qrcode").qrcode("IntellDomus: La tua casa domotica.");
-		</script>
 	</body>
 </html>	
